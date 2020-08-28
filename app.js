@@ -4,6 +4,7 @@ const MAX = 650
 function render() {
     let container = document.getElementById('pokemon')
     container.innerHTML = `<img class="poke" src="https://tinyurl.com/ironhack-pokemons/${count}.svg">`       
+    atualizaNumero()
 }
 
 let prev = document.getElementById('prev')
@@ -21,6 +22,11 @@ next.onclick = function() {
         count++
         render()
     }
+}
+
+atualizaNumero = function() {
+    document.getElementById('numero_pokemon').innerHTML = 'Pokemon ' 
+        + count + ' de ' + MAX
 }
 
 render()
